@@ -1,0 +1,48 @@
+body {
+	background-color: #BC8F8F;
+}
+fieldset {
+	border: solid 3px;
+	border-radius: 25px;
+}
+.fbHead {
+	width: 100%;
+	height: 250px;
+	background-image: url("rb.jpg");
+}
+.firstS {
+	padding: 10px;
+	width: 70%;
+	margin-left: 15%;
+	background-color: #8FBC8F;
+	border-radius: 25px;
+}
+#feedbacktext {
+	width: 500px;
+	height: 200px;
+}
+#img1 {
+	width: 95%;
+	margin-left: 2.5%; 
+	height: 300px;
+	border-radius: 25px;
+}
+.table {
+	width: 100%;
+}
+.footsection {
+	padding: 10px;
+	width: 70%;
+	margin-left: 15%;
+	align: center;
+	background-color: #BC8F8F;
+	border-radius: 25px;
+	text-align: center;
+}
+#submit {
+	background-image: url("surveybutton.jpg");
+	background-size: cover;
+	height: 50px;
+	width: 100px;
+	border-radius: 25px;
+}

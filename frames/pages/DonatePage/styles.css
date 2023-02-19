@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: green;
+}
+h1 {
+  text-align: left;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0%;
+}
+div {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.two {
+  background-image: url("./park/forest-fog-sunny-nature-615348.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.three {
+  background-image: url("./park/pexels-photo-610294.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.four {
+  background-image: url("./park/pexels-photo-733478.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.nine {
+  background-image: url("./park/pexels-photo-5029853.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; 
+}
+.ten {
+  height: 40px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: strong;
+}
+table {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+a:link {
+  text-decoration: underline;
+  color: blue;
+}
+a:visited {
+  text-decoration: underline;
+  color: purple;
+}
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+a:active {
+  background-color: yellow;
+}

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="feedback.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<form>
+
+<div class="fbHead">
+</div>
+<br>
+<div class="firstS">
+	<h1 id="h1"> Customers Feedbacks </h1>
+  <fieldset>
+  <legend><strong> Customer Information </strong> </legend>
+  <table class="table">
+   <tr>
+    <td>
+    <p><label>Title</label>
+    <select id="title">
+	<option value="0"> </option>
+	<option value="Mr."> Mr.</option>
+	<option value="Mrs."> Mrs.</option>
+	<option value="Ms."> Ms.</option>
+    </select>
+    </td>
+    <td>
+    <p><label>Customer Name</label> <input type="text" id="name" name="lastname"/>	
+    </td>
+    <td>
+    <p><lable>Email</label> <input type="email" id="email" name="emailaddress"/></p>
+    </td>
+    <td>
+    <p><label>Phone Number</label> <input type="tel" id="phone" name="phonenumber"/></p>
+    </td>
+   </tr>
+  </table>
+  </fieldset>
+  	<br>
+  <fieldset>
+  <legend><strong> Survey </strong></legend>
+   <p> <strong> Bus Tour </strong> </p>
+   <p align="center"><input type="radio" name="bt" id="bt1" value="1"> have not experienced 
+   <input type="radio" name="bt" value="2"> poor experience 
+   <input type="radio" name="bt" value="3"> fair experience 
+   <input type="radio" name="bt" value="4"> good experience
+   <input type="radio" name="bt" value="5"> excellent experience </p>
+   
+   <p> <strong> Animal Petting </strong> </p>
+   <p align="center"><input type="radio" name="ap" value="1"> have not experienced 
+   <input type="radio" name="ap" value="2"> poor experience 
+   <input type="radio" name="ap" value="3"> fair experience 
+   <input type="radio" name="ap" value="4"> good experience
+   <input type="radio" name="ap" value="5"> excellent experience </p>
+ 	
+   <p> <strong> Aquarium Tour </strong> </p>
+   <p align="center"><input type="radio" name="aq" value="1"> have not experienced 
+   <input type="radio" name="aq" value="2"> poor experience 
+   <input type="radio" name="aq" value="3"> fair experience 
+   <input type="radio" name="aq" value="4"> good experience
+   <input type="radio" name="aq" value="5"> excellent experience </p>
+
+   <p> <strong> Forest Walk </strong> </p>
+   <p align="center"><input type="radio" name="fw" value="1"> have not experienced 
+   <input type="radio" name="fw" value="2"> poor experience 
+   <input type="radio" name="fw" value="3"> fair experience 
+   <input type="radio" name="fw" value="4"> good experience
+   <input type="radio" name="fw" value="5"> excellent experience </p>	
+
+   <p> <strong> River Boating </strong> </p>
+   <p align="center"><input type="radio" name="rb" value="1"> have not experienced 
+   <input type="radio" name="rb" value="2"> poor experience 
+   <input type="radio" name="rb" value="3"> fair experience 
+   <input type="radio" name="rb" value="4"> good experience
+   <input type="radio" name="rb" value="5"> excellent experience </p>
+
+   <p> <strong> Observation Center </strong> </p>
+   <p align="center"><input type="radio" name="oc" value="1"> have not experienced 
+   <input type="radio" name="oc" value="2"> poor experience 
+   <input type="radio" name="oc" value="3"> fair experience 
+   <input type="radio" name="oc" value="4"> good experience
+   <input type="radio" name="oc" value="5"> excellent experience </p>
+
+   <p> <strong> Imax Theater </strong> </p>
+   <p align="center"><input type="radio" name="th" value="1"> have not experienced 
+   <input type="radio" name="th" value="2"> poor experience 
+   <input type="radio" name="th" value="3"> fair experience 
+   <input type="radio" name="th" value="4"> good experience
+   <input type="radio" name="th" value="5"> excellent experience </p>
+
+   <p> <strong> Cable Car Ride </strong> </p>
+   <p align="center"><input type="radio" name="cr" value="1"> have not experienced 
+   <input type="radio" name="cr" value="2"> poor experience 
+   <input type="radio" name="cr" value="3"> fair experience 
+   <input type="radio" name="cr" value="4"> good experience
+   <input type="radio" name="cr" value="5"> excellent experience </p>
+  </fieldset>
+  <br>
+  <fieldset>
+  <legend> <strong> Feedback </strong> </legend>
+  <table class="table">
+  <tr>
+   <td width="40%">
+   <p> <strong> Overall Customer Services </strong> </p> 
+   <input type="radio" name="cs" value="1"> poor service
+   <input type="radio" name="cs" value="2"> fair service
+   <input type="radio" name="cs" value="3"> good service
+   <input type="radio" name="cs" value="4"> excellent service </p>
+   </td>
+   <td rowspan="2">
+     <img src="cablecar.jpg" id="img1"/>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   <p> <strong> Tell us more about your experience at Nature Park </strong> <br> <br>
+   <textarea id="feedbacktext" placeholder="enter your feedback here"></textarea> </p>
+   </td>
+  </tr>
+  </table>
+
+  </fieldset>
+	
+</div>
+  
+<div class="footsection">
+  <input type="button" onclick="SubDisp()" id="submit"/>
+</div>
+</form>
+</body>
+
+<script>
+function isDigitCode(n) {
+	return !isNaN(parseFloat(n)) && isFinite(n);	
+}
+
+function displayText(n) {
+	if(n=="1")
+	{
+		return "have not experienced";
+	}
+	else if(n=="2")
+	{	
+		return "poor experience";
+	}
+	else if(n=="3")
+	{	
+		return "fair experience";
+	}
+	else if(n=="4")
+	{	
+		return "good experience";
+	}
+	else if(n=="5")
+	{	
+		return "excellent experience";
+	}
+}	
+
+function displayServiceRate(n) {
+	if(n=="1")
+	{
+		return "poor service";
+	}
+	else if(n=="2")
+	{	
+		return "fair service";
+	}
+	else if(n=="3")
+	{	
+		return "good service";
+	}
+	else if(n=="4")
+	{	
+		return "excellent service";
+	}
+}
+			
+function SubDisp() {
+	var name=document.getElementById("name").value;
+	var title=document.getElementById("title").value;
+	var email=document.getElementById("email").value;
+	var phone=document.getElementById("phone").value;
+	var title=document.getElementById("title").value;
+	
+	if(title==0)
+	{
+		alert("Please choose your title");
+		return false;
+	}
+	if(name.length==0)
+	{
+		alert("Your name must be entered");
+		return false;
+	}
+	if(email.length==0)
+	{
+		alert("Email must be entered");
+		return false;
+	}
+	var len= email.toString().length;
+	
+		for(var i=0;i<len;i++)
+		{
+			if(email[i]=='@')
+			{
+				break;
+			}
+			else if(i==len-1&&email[i]!='@')
+			{
+				alert("Please enter correct email form with @");
+				return false;
+			}
+		}
+	if(phone.length<10)
+	{
+		alert("Phone Number must be entered and must be has valid length (10 numbers)");
+		return false;
+	}
+	if(!isDigitCode(phone))
+	{
+		alert("Phone Number must be numeric value");
+		return false;
+	}
+	var bts=document.querySelector('input[name="bt"]:checked');
+	if(bts!=null)
+	{
+		var bt = displayText(bts.value);
+	}
+	else 
+	{
+		alert("Bus Tour must be rated");
+		return false;
+	}
+
+	var aps=document.querySelector('input[name="ap"]:checked');
+	if(aps!=null)
+	{
+		var ap = displayText(aps.value);
+	}
+	else 
+	{
+		alert("Animal Petting must be rated");
+		return false;
+	}
+
+	var aqs=document.querySelector('input[name="aq"]:checked');
+	if(aqs!=null)
+	{
+		var aq = displayText(aqs.value);
+	}
+	else 
+	{
+		alert("Aquarium Tour must be rated");
+		return false;
+	}
+
+	var fws=document.querySelector('input[name="fw"]:checked');
+	if(fws!=null)
+	{
+		var fw = displayText(fws.value);
+	}
+	else 
+	{
+		alert("Forest Walk must be rated");
+		return false;
+	}
+	
+	var rbs=document.querySelector('input[name="rb"]:checked');
+	if(rbs!=null)
+	{
+		var rb = displayText(rbs.value);
+	}
+	else 
+	{
+		alert("River Boating must be rated");
+		return false;
+	}
+	
+	var ocs=document.querySelector('input[name="oc"]:checked');
+	if(ocs!=null)
+	{
+		var oc = displayText(ocs.value);
+	}
+	else 
+	{
+		alert("Observation Center must be rated");
+		return false;
+	}
+	
+	var ths=document.querySelector('input[name="th"]:checked');
+	if(ths!=null)
+	{
+		var th = displayText(ths.value);
+	}
+	else 
+	{
+		alert("Imax Theater must be rated");
+		return false;
+	}
+
+	var crs=document.querySelector('input[name="cr"]:checked');
+	if(crs!=null)
+	{
+		var cr = displayText(crs.value);
+	}
+	else 
+	{
+		alert("Cable Car Ride must be rated");
+		return false;
+	}
+	
+	var css=document.querySelector('input[name="cs"]:checked');
+	if(css!=null)
+	{
+		var cs = displayServiceRate(css.value);
+	}
+	else 
+	{
+		alert("Overall Customer Services must be rated");
+		return false;
+	}
+
+	var fbt=document.getElementById("feedbacktext").value;
+	
+	document.write("<h2> Feedback Confirmation </h2>");
+	document.write("Bus Tour: "+bt+"<br>");
+	document.write("Animal Petting: "+ap+"<br>");
+	document.write("Aquarium Tour: "+aq+"<br>");
+	document.write("Forest Walk: "+fw+"<br>");
+	document.write("River Boating: "+rb+"<br>");
+	document.write("Observation Center: "+oc+"<br>");
+	document.write("Imax Theater: "+th+"<br>");
+	document.write("Cable Car Ride: "+cr+"<br>");
+	document.write("<br><strong>Overall Customer Service: </strong>"+cs+"<br>");
+	
+	if(fbt!="") {
+		document.write("<strong>Customer's Contribution: </strong>"+fbt);
+	}
+
+	document.write("<h2> Thanks for participating in our Customer Engagement Survey</h2>");
+	document.write("Dear "+title+name+",<br>");
+	document.write("We're really appreciate your contribution, your feedback will help make our park a great destination. <br>Within one to two weeks, our staffs will evaluate your feedback.");
+	document.write("and our staffs might contact you via your email @"+email);
+	document.write("<br><br>Nature Park always strive our best to bring excelent services to your family. Thank you for choosing Nature Park. Hope to see you soon.");
+}
+</script>
+
+</html>

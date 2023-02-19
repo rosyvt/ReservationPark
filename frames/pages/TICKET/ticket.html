@@ -1,0 +1,459 @@
+<html>
+<head>
+	<link rel="stylesheet" href="ticket.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Ticket Booking </title>
+</head>
+<body>
+<div class="heading">
+</div>
+<div class="firstsection">
+	<h1 id="hd"> Nature Park Tickets Booking Site </h1>
+	<table class="firsttable">
+		<tr>
+			<th width="30%">
+				<p> Mega Ticket </p>
+			</th>
+			<th width="30%">
+				<p> Standard Ticket </p>
+			</th>
+			<th width="30%">
+				<p> Ticket Price </p>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<ul> <li> Bus Tour </li> <li> Animal Petting </li> <li> Aquarium Tour </li> <li> Forest Walk </li> 
+				<li> River Boating </li> <li> Observation Center </li> <li> Imax Theater </li> <li> Cable Car Ride </li> </ul> </p>
+			</td>
+			<td>
+				<ul> <li> Bus Tour </li> <li> Aquarium </li> <li> Forest Walk </li> <li> River Boating </li> </p>
+			</td>
+			<td>
+				<div class="ticketprice">
+					<p> Mega Adult Ticket $150 </p>
+					<p> Mega Children Ticket $100 </p>
+					<p> Standard Adult Ticket $90 </p>
+					<p> Mega Children Ticket $60 </p>  
+				</div>
+			</td>
+				
+		</tr>
+	</table>
+</div>
+<form id="mainform">
+<div class="secondsection">
+<table class="secondtable">
+	<tr>	
+		<td width="60%">
+			<fieldset>
+				<p align="left"> <label> Adults (18+) Mega Ticket  </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" onclick="increaseB()" class="idB" value="+"/> <span id="r1">0</span> <input type="button" onclick="decreaseB()" class="idB" value="-"/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cost $<span id="r1a"></span> </p> 
+				
+				<p align="left"> <label> Children (5+) Mega Ticket  </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" onclick="in2()" class="idB" value="+"/> <span id="r2">0</span> <input type="button" class="idB" onclick="de2()" value="-"/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cost $<span id="r2a"></span> </p> 
+				
+				<p align="left"> <label> Adult (18+) Standard Ticket  </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" onclick="in3()" value="+" class="idB"/> <span id="r3">0</span> <input type="button" onclick="de3()" class="idB" value="-"/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cost $<span id="r3a"></span> </p> 	
+				
+				<p align="left"> <label> Children (18+) Standard Ticket  </label> &nbsp;&nbsp;
+				<input type="button" onclick="in4()" value="+" class="idB"/> <span id="r4">0</span> <input type="button" onclick="de4()" class="idB" value="-"/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cost $<span id="r4a"></span> </p> 
+				
+				<p align="left"> <label> Date </label>
+				<input type="date" id="dd" name="date"/> &nbsp;&nbsp;&nbsp;&nbsp;
+				Yours total <span id="numT">0</span> tickets cost $ <span id="totalCost1"></span></p>	
+			</fieldset>
+		</td>
+		<td>
+			<img src="aquarium.jpg" id="img1"/>
+		</td>
+	</tr>
+</table>
+</div>
+<br>
+<div class="thirdsection">
+<table class="thirdtable">
+	<tr>
+		<td>
+			<img src="img2.jpg" id="img2"/>
+		</td>
+		<td width="60%">
+			<fieldset>
+				<legend> <strong> Contact Information </strong> </legend>
+					<table width="100%">
+					<tr>
+						<td width="50%">
+							<p class="textClass"><label> First Name </label>
+							<input type="text" placeholder="enter first name here" name="firstname" id="firstname"/></p>
+						</td>	
+						<td width="50%">
+							<p class="textClass"><label> Last Name </label>
+							<input type="text" placeholder="enter last name here" name="lastname" id="lastname"/></p>
+						</td>		
+					</tr>
+					<tr>
+						<td>
+							<p class="textClass"><label> Street Adress </label>
+							<input type="text" id="street" name="streetaddress" placeholder="enter street address here"/></p>	
+						</td>
+						<td>
+							<p class="textClass"><label> Zipcode </label>
+							<input type="text" id="zipcode" name="zipcode" placeholder="enter zipcode here"/></p>	
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="textClass"><label> Phone Number </label>
+							<input type="tel" id="telnum" name="phoneNum" placeholder="enter phone number here"/></p>
+						</td>
+						<td>
+							<p class="textClass"><label> Email Address </label>
+							<input type="email" id="email" name="emailadd" placeholder="enter phone email here"/></p>
+						</td>
+					</tr>
+					</table>
+			</fieldset>
+		</td>
+	</tr>
+</table>
+</div>
+<br>
+<div class="lastsection">
+<table class="lasttable" width="100%">
+	<tr>
+		<td width="50%">
+			<fieldset> 
+			<legend> <strong> Payment Information </strong> </legend>
+			<table id="innertable1">
+			<tr>
+				<td>
+				<p class="textClass"><label> Card Number </label>
+				<input type="text" id="cardNo" name="creditcard" placeholder="enter card number here"/></p>
+				</td>
+				<td>
+				<p> <strong> Your total is $ <span id="r6"></span> <strong> </p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<p class="textClass"><label> Security </label><br>
+				<input type="text" id="scNo" name="security" placeholder="enter security number here" pattern="[0-9]{3}"/></p>
+				</td>
+				<td>
+				<p class="textClass"><label> Expired Date </label>
+				<input type="month" id="expD" name="expDate" min="2020-10"/></p>
+				</td>
+			</tr>
+			</table>
+			</fieldset>
+			<div class="buttondiv">
+				<p> <strong> I agree to terms and conditions </strong>
+				<input type="checkbox" name="tandc" required></p>
+				<input type="button" id="submitb" onclick="SubAndDisp()" value="Submit"/>	
+			</div>
+		</td>
+		<td>
+			<img src="img3.jpg" id="img3"/>
+		</td>
+	</tr>
+</table>
+</div>
+</form>
+</body>
+
+<script>
+	function getTotal(){
+	rs1=document.getElementById("r1a").textContent;
+	r1=Number(rs1);
+	rs2=document.getElementById("r2a").textContent;
+	r2=Number(rs2);
+	rs3=document.getElementById("r3a").textContent;
+	r3=Number(rs3);
+	rs4=document.getElementById("r4a").textContent;
+	r4=Number(rs4);
+	rst=r1+r2+r3+r4;
+	document.getElementById("totalCost1").innerHTML=rst;
+	document.getElementById("r6").innerHTML=rst;
+	
+	s1=document.getElementById("r1").textContent;
+	s1=Number(s1);
+	s2=document.getElementById("r2").textContent;
+	s2=Number(s2);
+	s3=document.getElementById("r3").textContent;
+	s3=Number(s3);
+	s4=document.getElementById("r4").textContent;
+	s4=Number(s4);
+	ss=s1+s2+s3+s4;
+	document.getElementById("numT").innerHTML=ss;
+	}
+	
+	function increaseB(){
+	tmp = document.getElementById("r1").textContent;
+	Number(tmp);
+	tmp++;
+	document.getElementById("r1").innerHTML=tmp;
+	
+	resultCost = tmp*150;
+	document.getElementById("r1a").innerHTML=resultCost;
+	
+	getTotal();
+	}
+	
+	function decreaseB(){
+	tmp = document.getElementById("r1").textContent;
+	Number(tmp);
+	tmp--;
+	if(tmp<0)
+	{
+		alert("Number of Tickets must greater than or equal to 0");
+		return 0;
+	}
+	document.getElementById("r1").innerHTML=tmp;
+	
+	resultCost = tmp*150;
+	document.getElementById("r1a").innerHTML=resultCost;
+	getTotal()
+	}
+//secondsection
+	function in2(){
+	tmp = document.getElementById("r2").textContent;
+	Number(tmp);
+	tmp++;
+	document.getElementById("r2").innerHTML=tmp;
+	
+	resultCost = tmp*100;
+	document.getElementById("r2a").innerHTML=resultCost;
+	getTotal()
+	}
+	
+	function de2(){
+	tmp = document.getElementById("r2").textContent;
+	Number(tmp);
+	tmp--;
+	if(tmp<0)
+	{
+		alert("Number of Tickets must greater than or equal to 0");
+		return 0;
+	}
+	document.getElementById("r2").innerHTML=tmp;
+	
+	resultCost = tmp*100;
+	document.getElementById("r2a").innerHTML=resultCost;
+	getTotal()
+	}
+//thirdsection
+	function in3(){
+	tmp = document.getElementById("r3").textContent;
+	Number(tmp);
+	tmp++;
+	document.getElementById("r3").innerHTML=tmp;
+	
+	resultCost = tmp*90;
+	document.getElementById("r3a").innerHTML=resultCost;
+	getTotal()
+	}
+	
+	function de3(){
+	tmp = document.getElementById("r3").textContent;
+	Number(tmp);
+	tmp--;
+	if(tmp<0)
+	{
+		alert("Number of Tickets must greater than or equal to 0");
+		return 0;
+	}
+	document.getElementById("r3").innerHTML=tmp;
+	
+	resultCost = tmp*90;
+	document.getElementById("r3a").innerHTML=resultCost;
+	getTotal()
+	}
+//fourthsection
+	function in4(){
+	tmp = document.getElementById("r4").textContent;
+	Number(tmp);
+	tmp++;
+	document.getElementById("r4").innerHTML=tmp;
+	
+	resultCost = tmp*60;
+	document.getElementById("r4a").innerHTML=resultCost;
+	getTotal()
+	}
+	
+	function de4(){
+	tmp = document.getElementById("r4").textContent;
+	Number(tmp);
+	tmp--;
+	if(tmp<0)
+	{
+		alert("Number of Tickets must greater than or equal to 0");
+		return 0;
+	}
+	document.getElementById("r4").innerHTML=tmp;
+	
+	resultCost = tmp*60;
+	document.getElementById("r4a").innerHTML=resultCost;
+	getTotal()
+	}
+//check if enter value is number
+	function isDigitCode(n) {
+	return !isNaN(parseFloat(n)) && isFinite(n);	
+	}
+			
+	function SubAndDisp() {
+	
+	var zipcode = document.getElementById("zipcode").value;
+	var phone = document.getElementById("telnum").value;
+	var cardNo = document.getElementById("cardNo").value;
+	var scNo = document.getElementById("scNo").value;
+	
+	var date = new Date();
+	date = document.getElementById("dd").value;
+
+	var expD = new Date();
+	expD = document.getElementById("expD").value;	
+	
+		if(date=="")
+		{
+			alert("Please choose travel date");
+			return false;
+		}
+		if(firstname.value.length == 0)
+		{
+			alert("First name must be entered");
+			return false;
+		}
+		else if(lastname.value.length == 0)
+		{
+			alert("Last name must be entered");
+			return false;
+		}
+		else if(email.value.length == 0)
+		{
+			alert("Email must be entered");
+			return false;
+		}	
+		else if(street.value.length == 0)
+		{
+			alert("Street address must be entered");
+			return false;
+		}
+		else if(zipcode.length <5)
+		{
+			alert("Zipcode length must be about 5 numbers");
+			return false;
+		}
+		else if(!isDigitCode(zipcode))
+		{
+			alert("Zipcode must be a numberic value");
+			return false;
+		}
+		else if(phone.length < 10)
+		{
+			alert("Phone number length must be about 10 numbers");
+			return false;
+		}
+		else if(!isDigitCode(phone))
+		{
+			alert("Phone Number must be a numberic value");
+			return false;
+		}
+
+		var emailadd=document.getElementById("email").value;
+		var len = emailadd.toString().length;
+		for(var i=0;i<emailadd.length;i++)
+		{
+			if(emailadd[i]=='@')
+			{
+				break;
+			}
+			else if(i==emailadd.length-1&&emailadd[i]!='@')
+			{
+				alert("Please enter correct email form with @");
+				return false;
+			}
+		}
+		
+		if(scNo.length != 3)
+		{
+			alert("Security Code length must about 3 numbers");
+			return false;
+		}
+		else if(!isDigitCode(scNo))
+		{
+			alert("Security Code must be a numberic value");
+			return false;
+		}
+		else if(cardNo.length != 16)
+		{
+			alert("Invalid Credit card length (16 numbers)");
+			return false;
+		}
+		else if(!isDigitCode(cardNo))
+		{
+			alert("Card Number must be a numberic value");
+			return false;
+		}	
+		else if(expD=="")
+		{
+			alert("Please enter card expire date");
+			return false;
+		}
+		
+		var ths=document.querySelector('input[name="tandc"]:checked');
+		if(ths==null)
+		{
+			alert("Please agree to the conditions and check the box");
+			return false;
+		}
+		
+		
+	
+		var fname=document.getElementById("firstname").value;
+		var lname=document.getElementById("lastname").value;
+		
+		var phone=document.getElementById("telnum").value;
+		var dd=document.getElementById("dd").value;
+		
+		var AdultM=document.getElementById("r1").textContent;
+		var AMcost=document.getElementById("r1a").textContent;
+		
+		var ChildM=document.getElementById("r2").textContent;
+		var CMcost=document.getElementById("r2a").textContent;
+		
+		var AdultS=document.getElementById("r3").textContent;
+		var AScost=document.getElementById("r3a").textContent;
+		
+		var ChildS=document.getElementById("r4").textContent;
+		var CScost=document.getElementById("r4a").textContent;
+		
+		var totalCost=document.getElementById("totalCost1").textContent;
+		
+		var eCard = cardNo[12]+cardNo[13]+cardNo[14]+cardNo[15];
+
+	document.write("Thank you Mr./Mrs. <strong>"+lname+"</strong> for choosing Nature Park as your destination. We're very happy to provide your family our best services during your vaction. Below are your booking confirmation at Nature Park.");
+	document.write("<br>Customer can print this Confirmation page for information.");
+	document.write("<br><br><strong>Contact Information</strong><br><br>");
+	document.write("Last name: "+lname+"\xa0\xa0\xa0\xa0\xa0"+"First name: "+fname);
+	document.write("<br>Email address: "+emailadd+"\xa0\xa0\xa0\xa0\xa0"+"Phone number: "+phone);
+
+	document.write("<br><br> <strong>Ticket Information</strong><br>");
+	document.write("<br>\xa0<strong>Date: </strong>"+date);
+	document.write("<table><tr><th>Type of Ticket\xa0\xa0\xa0\xa0\xa0</th><th>Number of Tickets\xa0\xa0\xa0\xa0\xa0</th><th>Cost</th></tr>");
+	document.write("<tr><td>Mega Adult</td>\xa0\xa0\xa0\xa0\xa0<td>"+AdultM+"</td>\xa0\xa0\xa0\xa0\xa0<td>$"+AMcost+"</td></tr>");
+	document.write("<tr><td>Standard Adult</td>\xa0\xa0\xa0\xa0\xa0<td>"+AdultS+"</td>\xa0\xa0\xa0\xa0\xa0<td>$"+AScost+"</td></tr>");
+	document.write("<tr><td>Mega Children</td>\xa0\xa0\xa0\xa0\xa0<td>"+ChildM+"</td>\xa0\xa0\xa0\xa0\xa0<td>$"+CMcost+"</td></tr>");
+	document.write("<tr><td>Standard Adult</td>\xa0\xa0\xa0\xa0\xa0<td>"+ChildS+"</td>\xa0\xa0\xa0\xa0\xa0<td>$"+CScost+"</td></tr>");
+	document.write("<tr><td><strong>Total</strong></td>\xa0\xa0\xa0\xa0\xa0<td></td>\xa0\xa0\xa0\xa0\xa0<td><strong>$"+totalCost+"</strong></td></tr></table>");
+	
+	document.write("<br><strong>Payment Information</strong><br>");
+	document.write("<br>Credit Card ending in: "+eCard+"\xa0\xa0\xa0\xa0\xa0Expiration Date: "+expD);
+	document.write("<br><br>For more information or modify your booking schedule please contact our customer service at <strong>naturepark@nationpark.prg</strong> or call directly to <strong>(111)111-111</strong> to chat with our staffs available from 9:00am to 5:00p.m (Monday-Saturday). Thank you!");
+	
+}
+</script>
+</html>

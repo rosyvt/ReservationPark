@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Park Activities </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #808000;
+}
+
+/* Style the header */
+header {
+  background-color: #0F1E00;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: right;
+  width: 30%;
+  height: auto;
+  background: #183000;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #285100;
+  
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #0F1E00;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.card {
+  background-image: url('reserve.jpg');
+  background-color: #408000;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.frameimg {
+  background-color: #aaa;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto;
+  width: 50%;
+  padding: 20px;
+  
+}
+
+</style>
+</head>
+<body>
+
+
+
+<header>
+  <h2> Park Activities </h2>
+</header>
+
+<section>
+  <nav>
+    <div class="card">
+      <h2>Covid-19 Safety Information </h2>
+      <h5> Stay informed, stay safe </h5>
+      <img src="covid19.png" alt="Covid 19 information" style="width:500px;">
+      <p>Learn more about #COVID19</p>
+      <p>Visit: www.who.int/COVID-19</p>
+    </div>
+	
+	<div class="card">
+      <h2>Accesssibility Information </h2>
+      <p>For more information about accessibility</p>
+      <p>head to our accessibility page</p>
+    </div>
+	
+	<div class="card">
+      <h2>ON GOING ACTIVITIES </h2>
+      <p>"Lion in the Wild" Documentary - Imax Theather</p>
+      <p>"Our History" - Observation Center</p> <br> <br>
+	  <h2>UPCOMING ACTIVITIES </h2>
+	  <p>"Shark, and the Ocean" Documentary - Imax Theather</p>
+      <p>Guided African Safafi Tour - Now Arriving </p>
+    </div>
+	
+	
+  </nav>
+  
+  <article>
+	<div class="card">
+      <h2>SAFARI TOUR</h2>
+      <h5>Ride along with us on our guided tour </h5>
+	  <img src="tour.jpg" alt="Image of guided tour" style="height:300px;">
+      <p>Experience breathtaking landscapes on a wildlife safari, discover nature wonders on our trips themed around many
+		continent around the world.  </p> <br>
+	  <p>Did you know? </p>
+	  <p>Safari means journey, originally from the Arabic adjective سفر (safar) meaning a journey, travelling, 
+		touring or voyaging; the verb for "to travel" in Swahili is kusafiri. </p>
+     
+    </div>
+	
+    <div class="card">
+      <h2>PETTING ZOO</h2>
+      <h5>Interact with our most friendly animals </h5>
+      <img src="petting.jpg" alt="Image of petting zoo" style="height:300px;">
+      <p>At our petting zoo section, you and your childern get the chnce to be close up and personal with our most friendly creature.
+	  You get the chance to feed, pet, and interacts with animals that you might not often get too see.</p> <br>
+      <p>Note: Due to Covid-19, certains activities might not be available. </p>
+    </div>
+	
+	<div class="card">
+      <h2> AQUARIUM </h2>
+      <h5>Life in the water </h5>
+      <img src="aquarium.jpg" alt="Image of aquarium" style="height:300px;">
+      <p>Experience our aquatic fauna and flora in our walk way aquariums. With over 100 species, our aquarium is one of the largest around the world  </p>
+    </div>
+	
+	<div class="card">
+      <h2>FOREST</h2>
+      <h5>Natural preserve flora</h5>
+      <img src="hiking.jpg" alt="Image of hiking trial" style="height:300px;">
+      <p>An area of land dominated by trees. Walk to our forest hiking trial, observe the many floras and native creature in our forest. </p> <br>
+	  <p>Did you know? </p>
+	  <p>The word forest derives from the Old French forest (also forès), denoting "forest, vast expanse covered by trees"; 
+	  forest was first introduced into English as the word denoting wild land set aside for hunting without the necessity 
+	  in definition of having trees on the land. </p>
+    </div>
+	
+	<div class="card">
+      <h2>KAYAK BOATING</h2>
+      <h5>Ride along the water </h5>
+      <img src="kayak.jpg" alt="Image of river boating" style="height:300px;">
+      <p>Almost anyone can canoe or kayak, so get in the action</p>
+      <p>If you want to see nature in a new way, get your paddle and ride with us!</p>
+    </div>
+	
+	
+	<div class="card">
+      <h2>OBSERVATION CENTER</h2>
+      <h5>The hub of our park </h5>
+      <img src="tower.webp" alt="Image of the observation center" style="height:300px;">
+      <p>The modern central hub of our park</p>
+      <p>The hub of observation, from here you can see the majority of our theme park. 
+	  Futher more, From the central obsevation center, you can learn about our history and pupose thought our museum like layour. </p>
+    </div>
+	
+	<div class="card">
+      <h2>Cable car ride</h2>
+      <h5>Get to your desniation in minutes</h5>
+      <img src="cablecar.jpg" alt="Image of cable car" style="height:300px;">
+      <p>Mass and efficient transit in which rail cars are hauled by a continuously moving cable running at a fast speed. </p>
+    </div>
+	
+	<div class="card">
+      <h2>Imax Theater</h2>
+      <h5>Learn about our history and more </h5>
+      <img src="imax.jpg" alt="Image of the theather" style="height:300px;">
+      <p>IMAX theatre offers state-of-the-art, 4K digital projection producing incredible 3D images nearly eight stories high.</p>
+      <p>You can learn about the foundation of our park as well as many documentaries and show that we have.</p>
+    </div>
+  </article>
+</section>
+
+
+
+</body>
+</html>
